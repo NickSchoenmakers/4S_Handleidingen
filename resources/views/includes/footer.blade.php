@@ -1,6 +1,9 @@
 
 <footer>
 	© {{ __('misc.copyright') }}
+  <a href="#">{{ __('misc.about_us') }}</a>
+  <a href="#">{{ __('misc.contact_gegevens') }}</a>
+  <a href="#">{{ __('misc.social_links') }}</a>
 </footer>
 
 
@@ -16,6 +19,7 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
 </script>
 <!-- Einde analytics code -->
 

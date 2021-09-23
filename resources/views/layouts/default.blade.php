@@ -21,11 +21,13 @@
                 @yield('breadcrumb')
             </ul>
 
-            @if ( isset($_GET['q']) )
-                @include('includes.search_results')
-            @else
-                @yield('content')
-            @endif
+            <div class="brands">
+                @if ( isset($_GET['q']) )
+                    @include('includes.search_results')
+                @else
+                    @yield('content')
+                @endif
+            </div>
 
             <ul class="breadcrumb">
                 <li>
@@ -35,17 +37,14 @@
             </ul>
 
         
-
-            <div class="row">
-                <div class="bottom">
+            <div class="breadcrumb">                
+                
                     @include('includes.footer')
-                </div>
+                              
             </div>
         </div>
 
     </div>
-
-
 </div>
 
 <!-- Bootstrap core JavaScript

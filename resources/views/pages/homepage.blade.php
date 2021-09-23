@@ -1,10 +1,12 @@
 @extends('layouts.default')
 
+
 @section('introduction_text')
     <p>{{ __('introduction_texts.homepage_line_1') }}</p>
     <p>{{ __('introduction_texts.homepage_line_2') }}</p>
     <p>{{ __('introduction_texts.homepage_line_3') }}</p>
 @endsection
+
 
 @section('content')
 
@@ -13,6 +15,7 @@
             {{ __('misc.all_brands') }}
         @show
     </h1>
+    
 
 
     <?php
