@@ -37,10 +37,10 @@
             </ul>
 
         
-            <div class="breadcrumb">                
-                
+            <div class="breadcrumb"> 
+                <div class="bottom">
                     @include('includes.footer')
-                              
+                </div>                                              
             </div>
         </div>
 
