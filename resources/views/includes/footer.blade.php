@@ -3,7 +3,9 @@
 	© {{ __('misc.copyright') }}
   <a href="#">{{ __('misc.about_us') }}</a>
   <a href="#">{{ __('misc.contact_gegevens') }}</a>
-  <a href="#">{{ __('misc.social_links') }}</a>
+  <a href="#">Facebook</a>
+  <a href="#">Twitter</a>
+  <a href="#">Instagram</a>
 </footer>
 
 
