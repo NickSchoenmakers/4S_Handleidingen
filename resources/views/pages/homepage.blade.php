@@ -15,10 +15,14 @@
             {{ __('misc.all_brands') }}
         @show
     </h1>
-    
-
 
     <?php
+
+    use App\Models\Type;
+
+    $top10 = Type::all()->take(10);
+
+    
     $size = count($brands);
     $columns = 3;
     $chunk_size = ceil($size / $columns);
