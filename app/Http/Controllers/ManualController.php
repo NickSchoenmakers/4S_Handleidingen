@@ -22,5 +22,6 @@ class ManualController extends Controller
             "brand" => $brand,
             "visits" => $visits,
         ]);
+        
     }
 }
