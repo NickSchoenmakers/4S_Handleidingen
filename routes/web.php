@@ -26,18 +26,24 @@ Productcat:		/category/12/Computers/
 */
 
 use App\Models\Brand;
+use App\Models\Manual;
+use App\Models\Type;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\ManualController;
+use App\Http\Controllers\TopController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
 
+
 // Homepage
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
-    return view('pages.homepage', compact('brands'));
+    $manuals = Manual::all()->sortBy('visits');
+    $type = Type::all()->take(10);;
+    return view('pages.homepage', compact('brands'), compact('manuals'), compact('type'));
 })->name('home');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
@@ -59,6 +65,9 @@ Route::get('/{brand_id}/{brand_slug}/{type_id}/{type_slug}/', [TypeController::c
 
 // Detail page for a manual
 Route::get('/{brand_id}/{brand_slug}/{type_id}/{type_slug}/{manual_id}/', [ManualController::class, 'show']);
+
+// Detail page for a Top
+Route::get('/{brand_id}/{brand_slug}/{type_id}/{type_slug}/{manual_id}/', [TopController::class, 'show']);
 
 // List of brands per product category
 Route::get('/category/{category_id}/{category_slug}/', [ProductCategoryController::class, 'show']);

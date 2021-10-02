@@ -16,6 +16,7 @@ return [
     'home' => "Hoofdpagina",
 'home_alt' => "Download je handleiding: Gratis gebruikersgidsen!",
 'homepage_title' => "Download je handleiding",
+'name' => "nick schoenmakers",
 'copyright' => "Copyright 2021 Avarix",
 'about_us' => "over ons",
 'contact_gegevens' => "contact gegevens",

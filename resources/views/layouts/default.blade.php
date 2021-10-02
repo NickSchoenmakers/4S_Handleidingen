@@ -17,21 +17,12 @@
 
             <ul class="breadcrumb">
                 
-                <p>top 10 bezochte handleidingen </p>
+                
+                <li>
+					<a href="/" title="{{ __('misc.home_alt') }}" alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a>
+				</li>
                 @yield('breadcrumb')
-                <?php
-
-                use App\Models\Brand;
-                use App\Models\Type;
-
-
-                $someUsers = Brand::all()->take(10);
-                $type = Type::findOrFail($type_id);
-                ?>
-
-                @foreach($someUsers as $user)                   
-                    <a href="/{{ $brand->id }}/{{ $brand->name_url_encoded }}/{{ $user->id }}/{{ $user->name_url_encoded }}/">{{$type->name}}</a>
-                @endforeach
+                
                 
             </ul>
 

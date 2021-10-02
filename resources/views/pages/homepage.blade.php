@@ -2,6 +2,7 @@
 
 
 @section('introduction_text')
+    {{ __('misc.name') }}
     <p>{{ __('introduction_texts.homepage_line_1') }}</p>
     <p>{{ __('introduction_texts.homepage_line_2') }}</p>
     <p>{{ __('introduction_texts.homepage_line_3') }}</p>
@@ -20,7 +21,13 @@
     
 
 
+    
+    
+    
     <?php
+
+    
+    
 
   
 
@@ -33,14 +40,28 @@
     ?>
 
     <div class="container">
+        <!-- 
+           
+        
+       
+        @foreach($manuals as $manual)
+            <li><a href="/{{ $manual->id }}/{{ $manual->name_url_encoded }}"> $type->name</li>
+        @endforeach -->
+        
         <!-- Example row of columns -->
         <div class="row">
 
             @foreach($brands->chunk($chunk_size) as $chunk)
+                
+                
                 <div class="col-md-4">
+                
+                
 
                     <ul>
                         @foreach($chunk as $brand)
+                        
+                        
 
                             <?php
                             $current_first_letter = strtoupper(substr($brand->name, 0, 1));
